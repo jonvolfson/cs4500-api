@@ -1,0 +1,3 @@
+NO TIME TO PUT PART2 IN OWN REPO. FILE PATH TO PART 2 IS ASG01/PART2
+
+https://github.com/jonvolfson/cs4500.git
