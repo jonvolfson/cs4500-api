@@ -19,8 +19,13 @@ class Array : public Object {
   }
 
   // inserts the given object into the array and returns the array
-  void insert(Object* obj, size_t index) {
+  void insert(void* obj, size_t index) {
 
+  }
+    
+  // adds the given object to the end of the array 
+  void add(void* obj) {
+  
   }
 
   // remove the item at the given index
