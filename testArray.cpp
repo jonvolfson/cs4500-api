@@ -60,7 +60,7 @@ void test3() {
 	a1->remove(0);
 	t_true(a1->count() == 2);
 	a1->insert(new int(100), 0);
-	t_false(a1->get(0) == a1->get(1));
+	t_false(*a1->get(0) == *a1->get(1));
 	printf("3\n");
 }
 // test our BoolArray class
@@ -70,7 +70,7 @@ void test4() {
 	// test insert and count
 	a1->insert(new bool(true), 0);
 	a1->insert(new bool(true), 1);
-	t_true(a1->get(0) == a1->get(1));
+	t_true(*a1->get(0) == *a1->get(1));
 	t_true(a1->count() == 2);
 	t_true(a1->length() == 4); // when reaching max capacity, resize the array
 	// testing dynamic add
@@ -79,7 +79,7 @@ void test4() {
 	a1->remove(0);
 	t_true(a1->count() == 2);
 	a1->insert(new bool(false), 0);
-	t_false(a1->get(0) == a1->get(1));
+	t_false(*a1->get(0) == *a1->get(1));
 	printf("4\n");
 }
 // test our FloatArray class
@@ -89,7 +89,7 @@ void test5() {
 	// test insert and count
 	a1->insert(new float(3.1), 0);
 	a1->insert(new float(3.1), 1);
-	t_true(a1->get(0) == a1->get(1));
+	t_true(*a1->get(0) == *a1->get(1));
 	t_true(a1->count() == 2);
 	// testing dynamic add
 	a1->append(new float(3.1));
@@ -97,7 +97,7 @@ void test5() {
 	a1->remove(0);
 	t_true(a1->count() == 2);
 	a1->insert(new float(1.2), 0);
-	t_false(a1->get(0) == a1->get(1));
+	t_false(*a1->get(0) == *a1->get(1));
 	printf("5\n");
 }
 int main() {
